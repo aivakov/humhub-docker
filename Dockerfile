@@ -50,6 +50,7 @@ RUN apk add --no-cache \
     npm
 
 RUN npm install grunt
+RUN npm config set unsafe-perm true
 RUN npm install -g grunt-cli
 
 RUN apk add --no-cache \
@@ -129,6 +130,9 @@ RUN chmod 600 /etc/crontabs/nginx && \
 VOLUME /var/www/localhost/htdocs/uploads
 VOLUME /var/www/localhost/htdocs/protected/config
 VOLUME /var/www/localhost/htdocs/protected/modules
+VOLUME /var/www/localhost/htdocs/protected/uploads
+VOLUME /var/www/localhost/htdocs/protected/runtime
+VOLUME /var/www/localhost/htdocs/assets
 
 EXPOSE 80
 
