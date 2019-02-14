@@ -48,6 +48,7 @@ else
 	cp -v /usr/src/humhub/.version /var/www/localhost/htdocs/protected/config/.version
 
 	mkdir -p /var/www/localhost/htdocs/protected/runtime/logs/
+	mkdir -p /var/www/localhost/htdocs/themes/CubbyNet
 	touch /var/www/localhost/htdocs/protected/runtime/logs/app.log
 
 	echo "Setting permissions..."
@@ -72,6 +73,7 @@ else
 		php yii installer/create-admin-account
 		chown -R nginx:nginx /var/www/localhost/htdocs/protected/runtime
 	fi
+cp -r /var/www/localhost/htdocs/themes/HumHub/* /var/www/localhost/htdocs/themes/CubbyNet
 fi
 
 echo "Config preprocessing ..."

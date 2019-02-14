@@ -10,7 +10,7 @@ services:
     environment:
       HUMHUB_DB_USER: root
       HUMHUB_DB_PASSWORD: root
-      HUMHUB_AUTO_INSTALL: 1
+      HUMHUB_AUTO_INSTALL: 0
       HUMHUB_DEBUG: 1
     volumes:
       - "/var/www/localhost/htdocs/protected/config:/var/www/localhost/htdocs/protected/config"
@@ -18,6 +18,7 @@ services:
       - "/var/www/localhost/htdocs/protected/modules:/var/www/localhost/htdocs/protected/modules"
       - "/var/www/localhost/htdocs/protected/runtime:/var/www/localhost/htdocs/protected/runtime"
       - "/var/www/localhost/htdocs/assets:/var/www/localhost/htdocs/assets"
+      - "/etc/humhub/themes/CubbyNet:/var/www/localhost/htdocs/themes/CubbyNet"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/ping"]
       interval: 30s
