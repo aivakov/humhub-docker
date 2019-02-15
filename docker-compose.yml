@@ -35,7 +35,7 @@ services:
       timeout: 10s
       retries: 3
     volumes:
-      - /var/lib/mysql:/var/lib/mysql
+      - /var/lib/mysql:/var/lib/mysql:rw
   smtp:
     image: namshi/smtp
     container_name: smtp
