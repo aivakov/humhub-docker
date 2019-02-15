@@ -73,7 +73,6 @@ else
 		php yii installer/create-admin-account
 		chown -R nginx:nginx /var/www/localhost/htdocs/protected/runtime
 	fi
-cp -r /var/www/localhost/htdocs/themes/HumHub/* /var/www/localhost/htdocs/themes/CubbyNet
 fi
 
 echo "Config preprocessing ..."
