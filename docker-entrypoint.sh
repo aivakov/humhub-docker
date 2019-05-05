@@ -115,6 +115,7 @@ echo "Writing Nginx Config"
 envsubst "\$NGINX_CLIENT_MAX_BODY_SIZE" < /etc/nginx/nginx.conf > /tmp/nginx.conf
 cat /tmp/nginx.conf > /etc/nginx/nginx.conf
 rm /tmp/nginx.conf
+cp -r /var/www/localhost/htdocs/themes/HumHub/* /var/www/localhost/htdocs/themes/CubbyNet
 
 echo "=="
 

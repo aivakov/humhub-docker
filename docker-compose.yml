@@ -11,7 +11,7 @@ services:
       HUMHUB_DB_USER: root
       HUMHUB_DB_PASSWORD: root
       HUMHUB_AUTO_INSTALL: 0
-      HUMHUB_DEBUG: 1
+      HUMHUB_DEBUG: 0
     volumes:
       - "/var/www/localhost/htdocs/protected/config:/var/www/localhost/htdocs/protected/config"
       - "/var/www/localhost/htdocs/uploads:/var/www/localhost/htdocs/uploads"
@@ -36,11 +36,3 @@ services:
       retries: 3
     volumes:
       - /var/lib/mysql:/var/lib/mysql
-  smtp:
-    image: namshi/smtp
-    container_name: smtp
-    restart: always
-    ports:
-     - "25:25"
-    environment:
-      MAILNAME: smtp
